@@ -364,75 +364,12 @@
   .navContainer {
     display: block;
   }
-}
 
-.container1,
-  .container2,
-  .container3 {
-    grid-template-columns: 1fr !important;
-    display: grid;
-  }
-
-  .body1,
-  .body2,
-  .body3 {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-/* @media (min-width: 375px) and (max-width: 1024px) {
-
-   .topHeadSpan {
-    display: none;
-  }
-  
-  .hamburger {
-    display: block;
-    justify-self: end;
-  }
-
-  .navHead {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    background: white;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-  
-  .topHeader {
-    grid-template-columns: auto 1fr auto auto;
-  }
-
-  .navHead.active {
-    display: flex;
-  }
-
-  
-   .navHead a,
-  .navHead .services {
-    padding: 10px 0;
-  }
-
-  .services .dropdown {
-    position: static; 
-  }
-
-  .dropdown.active {
-    display: flex;
-  }
 
   .container1,
   .container2,
   .container3 {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr;
     display: grid;
   }
 
@@ -446,7 +383,4 @@
     width: 100%;
     height: auto;
   }
-
-
-} */
-
+}
