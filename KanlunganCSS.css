@@ -351,6 +351,33 @@
   .hamburger {
     display: block;
   }
+
+  .topHeadSpan,
+  .navContainer {
+    display: block;
+  }
+
+
+  .container1,
+  .container2,
+  .container3 {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .firstPic,
+  .secondPic,
+  .thirdPic {
+    order: 1;
+  }
+
+  .body1,
+  .body2,
+  .body3 {
+    order: 2;
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 376px) and (max-width: 1024px) {
