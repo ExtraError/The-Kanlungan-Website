@@ -283,11 +283,12 @@
 }
 
 
+
 .aboutUsBody {
-  display: grid;
-  justify-content: center;
-  
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   border: 1px solid black;
   margin: 5rem;
   border-radius: 3rem;
@@ -296,18 +297,27 @@
 
 
 .pAbout {
-  padding-left: 5rem;
-  padding-right: 5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+
+  display: flex;
+  
 
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
   font-size: 25px;
+  
 
   width: 100%;
+}
+
+.pSpacing {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
 }
 
 h3 {
@@ -316,6 +326,9 @@ h3 {
   font-weight: 500;
   font-style: normal;
   font-size: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feedbackMonitor {
