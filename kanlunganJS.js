@@ -11,3 +11,16 @@ document.addEventListener("click", (e) => {
     navMenu.classList.remove("active");
   }
 });
+
+
+
+function initHamburger() {
+  const btn = document.getElementById("hamburgerBtn");
+  const nav = document.getElementById("navMenu");
+
+  if (!btn || !nav) return;
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
