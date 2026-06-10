@@ -341,9 +341,10 @@ h3 {
 
 /* FOOTER */
 
+
 .footerContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   max-width: auto;
   height: auto;
   width: auto;
@@ -364,8 +365,26 @@ h3 {
 }
 
 .companyInfo {
+  display: grid;
+  
+}
+
+.contactInfo {
+  font-size: 25px;
+}
+
+.companyInfoContainer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+
+.socMedLink {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .hamburger {
@@ -376,6 +395,7 @@ h3 {
   justify-self: end;
   
 }
+
 
 
 @media (min-width: 375px) and (max-width: 765px) {
