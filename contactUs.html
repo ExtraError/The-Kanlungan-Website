@@ -34,24 +34,61 @@
       })
 
     </script>
+    
+    <h3>Contact Us</h3>
 
-    <form>
-      <div>
-        <input type="text" placeholder="Enter your name">
-        <input type="text" placeholder="Enter your lastname">
+        <div class="contactContain2">
+          <p class="parContact">
+            We would be happy to tell you more, you can leave your contact information in the box below or call us
+            on weekdays between 9 am and 4 pm. As our customer, you can contact our service team directly. We will
+            only use your contact information for contact purposes.
+          </p>
+        </div>
+
+      <div class="contactUsBody">
+
+
+            <form class="formBody">
+
+              <div class="userCon1">
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Enter your lastname">
+              </div>
+              <div class="userCon1">
+
+                <label for="phone">Phone number:</label>
+
+
+                    <select>
+                      <option value="+358">FI (+358)</option>
+                      <option value="+63">PH (+63)</option>
+                    </select>
+
+
+                <input id="phone" class="user1" type="tel" placeholder="Ex. 447512003">
+              </div>
+
+                  <textarea placeholder="You can write your message here..." class="textArea"></textarea>
+
+                  <div class="boton">
+                    <button type="submit">Send Message</button>
+                  </div>
+
+            </form>
+
+            <div class="contactContain1">
+              <p>We would be happy to discuss your needs personally.</p>
+              <p>Huopalahdentie 24, 00350 Helsinki</p>
+              <p>Laurinkatu 57 A, 08100 Lohja</p>
+              <p>+358 45 231 3188</p>
+              <p>homecare@kanlungan.fi</p>
+              <p>Business ID: 2990745-8</p>
+            </div>
+
+
+
       </div>
-
-      <div>
-        <label for="phone">Phone number:</label>
-        <select class="areaCode">
-          <option value="+358">Finland (+358)</option>
-        </select>
-        <input type="tel" placeholder="Ex. 447512003">
-      </div>
-
-      <textarea placeholder="You can write your message here..."></textarea>
-      <button type="submit" class="boton">Send Message</button>
-    </form>
+      
 
 
 
