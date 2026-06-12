@@ -115,6 +115,10 @@
   display: flex;
 }
 
+.topHeader a {
+  font-size: 30px;
+}
+
 .dropdown {
   position: absolute;
   top: 100%;
@@ -409,7 +413,7 @@ h3 {
 }
 
 .formBody {
-  width: 30rem;
+  width: 100%;
   max-width: 500px;
   height: auto;
   display: flex;
@@ -497,14 +501,14 @@ h3 {
 
 .contactContain2 {
   display: grid;
-  width: auto;
-  height: auto;
   place-items: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .parContact {
-  width: 80rem;
-  height: auto;
+  width: 100%;
+  max-width: 80rem;
 
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -513,11 +517,16 @@ h3 {
   font-size: 30px;
 }
 
-@media (min-width: 375px) and (max-width: 765px) {
+.contactUsGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 375px) and (max-width: 874px) {
+
   .topHeadSpan {
     display: none;
   }
-
 
   .navHead {
     display: none;
@@ -530,8 +539,9 @@ h3 {
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
-    overflow: visible;
-  }
+    
+    flex-wrap: wrap;
+  } 
 
   .services {
     display: block;
@@ -606,15 +616,103 @@ h3 {
     flex-direction: column;
   }
 
-}
+  .parContact {
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
 
-@media (min-width: 376px) and (max-width: 1024px) {
-  .topHeadSpan {
-    display: none;
+  .contactUsBody {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .formBody {
+    width: 100%;
+    max-width: 100%;
+    justify-self: center;
+    padding: 15px;
+  }
+
+  .contactContain1 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .userCon1:first-child {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .userCon1:first-child input {
+    width: 100%;
+  }
+
+  .userCon1:nth-child(2) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .userCon1 label {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .userCon1 select,
+  .userCon1 input {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .textArea {
+    height: 250px;
+  }
+
+  .boton button {
+    width: 100%;
+    max-width: 250px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 375px) and (max-width: 1084px) {
+  .topHeadSpan {
+    display: none;
+  }
+
+  .parContact {
+    font-size: 24px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .contactUsBody {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .formBody {
+    justify-self: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contactContain1 {
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1085px) {
   .topHeadSpan,
   .navContainer {
     display: block;
@@ -638,4 +736,5 @@ h3 {
     width: 100%;
     height: auto;
   }
+  
 }
