@@ -727,10 +727,11 @@ h3 {
 
   .dropdown {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: auto;
-    right: 100%;
-    right: calc(100% + 10px)
+    transform: translateX(calc(10px - -100%));
+    right: calc(100% + 10px);
+    max-width: calc(100vw - 20px);
   }
   
   .services > a {
@@ -757,6 +758,7 @@ h3 {
 
   .hamburger {
     display: block;
+    background: none;
   }
 
   .topHeadSpan,
