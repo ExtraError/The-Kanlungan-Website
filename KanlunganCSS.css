@@ -140,7 +140,7 @@ html {
   border: 1px solid gray;
   padding: 10px;
   list-style: none;
-  width: 163px;
+  width: 170px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -351,8 +351,8 @@ h3 {
 
 .feedbackMonitor {
   padding-top: 1rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   font-style: italic;
   font-size: 25px;
 }
