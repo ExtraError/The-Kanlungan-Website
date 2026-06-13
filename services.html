@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="KanlunganCSS.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playball&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/svg+xml" href="hamburgerMenu.svg">
+    <link rel="alternate icon" href="favicon.ico">
+
+
+  </head>
+
+
+  <body>
+
+    <div id="header"></div>
+
+    <script src="kanlunganJS.js"></script>
+
+    <script>
+      fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        initHamburger();
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      })
+
+
+    </script>
+
+    <div class="servicesBody">
+        <div class="service0">
+          <h3>
+            Services
+          </h3>
+
+          <p>
+            Kanlungan Oy is a service provider approved by the Regional State Administrative Agency for the well-being areas of Helsinki, Western Uusimaa (Espoo, Lohja, Kauniainen), Vantaa and Central Uusimaa. We provide home care in accordance with both the Health Care Act and the Social Services Act. We commit to a care plan that we have drawn up together with the customer.
+          </p>
+        </div>
+
+        <div class="service1">
+          <div class="servicePar1">
+            <h3>
+              Domiciliary care
+            </h3>
+
+              <div class="serviceInfo1">
+                We help and advise both the client and their family throughout the treatment. We make individual home visits and support long-term recovery. Home care tasks include:
+                <ul>
+                  <li>Medication dosing and distribution</li>
+                  <li>Drug injections</li>
+                  <li>Medication-related advice and guidance</li>
+                  <li>Pharmacy management</li>
+                  <li>Skin and wound monitoring and care</li>
+                  <li>Stitch removal</li>
+                  <li>Blood pressure and blood sugar measurement and monitoring, as well as related advice</li>
+                  <li>Taking and delivering blood and urine samples to the laboratory</li>
+                  <li>Ear irrigation</li>
+                  <li>Applying eye drops</li>
+                  <li>Ostomy care</li>
+                  <li>Catheterization</li>
+                  <li>Memory tests</li>
+                </ul>
+
+                  <p>A nurse will accompany you to the doctor's appointment if necessary. This ensures cooperation with the treating physician.</p>
+
+                  <div class="serviceButton">
+                    <button>
+                    Book a free introductory visit
+                    </button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="servicePrice1">
+              <div class="servicePriceContainer">
+                <p>
+                  Price
+                </p>
+
+                <ul>
+                  <li>The price includes home care tasks.</li>
+                  <li>Minimum operating time 30 min.</li>
+                  <li>No basic or departure fees</li>
+                  <li>40€ / hour</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+      <!-- ------------------------------------------- -->
+
+      <div class="servicesBody" id="homeHealthCare">
+
+        <div class="service1">
+          <div class="servicePar1">
+            <h3>
+              Home health care
+            </h3>
+
+              <div class="serviceInfo1">
+                Kanlungan Oy's nurses advise, support and guide both the patient and their family throughout the treatment. We also make individual home visits and help with long-term recovery. Home nursing tasks include:
+                <ul>
+                  <li>Medication dosing and distribution</li>
+                  <li>Drug injections</li>
+                  <li>Medication-related advice and guidance</li>
+                  <li>Pharmacy management</li>
+                  <li>Skin and wound monitoring and care</li>
+                  <li>Stitch removal</li>
+                  <li>Blood pressure and blood sugar measurement and monitoring, as well as related advice</li>
+                  <li>Taking and delivering blood and urine samples to the laboratory</li>
+                  <li>Ear irrigation</li>
+                  <li>Applying eye drops</li>
+                  <li>Ostomy care</li>
+                  <li>Catheterization</li>
+                  <li>Memory tests</li>
+                </ul>
+
+                  <p>A nurse will accompany you to the doctor's appointment if necessary. This ensures cooperation with the treating physician.</p>
+
+                  <div class="serviceButton">
+                    <button>
+                    Book a free introductory visit
+                    </button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="servicePrice1">
+              <div class="servicePriceContainer">
+                <p>
+                  Price
+                </p>
+
+                <ul>
+                  <li>The price includes home nursing tasks.</li>
+                  <li>Minimum operating time 30 min.</li>
+                  <li>50€/hour</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+      <!-- ------------------------------------------------------------------------ -->
+
+
+      <div class="condition">
+
+
+          <div class="condition1">
+            <h3>
+              Evening, night and weekend allowances
+            </h3>
+
+              <div>
+                <ul>
+
+                  <li>Evening supplement from 18:00 - 21:00 + 15%</li>
+                  <li>Night supplement from 21:00 to 06:00 + 40%</a></li>
+                  <li>Saturdays 06:00 - 20:00 + 25%</a></li>
+                  <li>Sundays and public holidays Sat 20:00 - Sun 24:00 + 100%</li>
+                  <li>Eve 00:00 - 20:00 + 100%</li>
+  
+                </ul>
+
+
+              </div>
+          </div>
+
+      </div>
+
+
+
+
+      <!-- ------------------------------------------------------------------------ -->
+
+      <div class="servicesBody">
+
+        <div class="service1">
+          <div class="servicePar1">
+            <h3>
+              Home care support services
+              (personal assistance, cleaning service, transaction service, clothing care service)
+            </h3>
+
+              <div class="serviceInfo1">
+                
+                <p>Personal assistance service means assistance with activities that the client     would be able to do on their own without their disability or illness. The service is based on the client's own decisions and choices. The assistant acts as a support for the client, not as a decision maker. The service includes, for example, assistance   with daily activities, housekeeping, shopping and hobbies.
+
+                <p>
+                  Home cleaning ensures that the home is neat, clean and that things are in the right places. In home care support services, the caregiver ensures the overall care and attention of the client. The caregiver's understanding of cleanliness and hygiene is often better than that of the person who only does the cleaning.
+                </p>
+
+                <p>
+                  A professional caregiver can assess the elderly person's ability to cope on their own during a home visit. This way, we can inform home care of any changes in service needs or, for example, report a concern before something unpleasant happens.
+                </p>
+
+                <p>
+                  Customer service refers to dealing with customers and providing assistance with transactions at home and outside the home, for example in purchasing food, groceries and medicines, and providing assistance when dealing with agencies or services, for example. 
+                </p>
+
+                <p>
+                  Tasks may include, for example, placing an electronic shopping order together with the customer, going to the store on behalf of the customer, picking up medication from the pharmacy, putting purchases in the cupboard, or assisting in contacting agencies or acting as an escort when dealing with healthcare.
+                </p> 
+
+                <p>
+                  Clothing care refers to laundry and further processing at the customer's home or
+                outside the home. It includes washing and hanging up clothing and linen at the customer's home or in the housing company's laundry room. Clothing care may also include folding and putting away clothes. Clothing care does not include washing hand-washable textiles or ironing linen.
+                </p>
+
+                <p>
+                Support services are a way to provide better care and provide the client with a comprehensive service that ensures a valuable end-of-life experience.
+                </p>
+
+                  <div class="serviceButton">
+                    <button>
+                    Book a free introductory visit
+                    </button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="servicePrice1">
+              <div class="servicePriceContainer">
+                <p>
+                  Price
+                </p>
+
+                <ul>
+                  <li>One-time visit</li>
+                  <li>Minimum charging time 2 hours.</li>
+                  <li>Kanlungan Oy's service is VAT-free. For others, 24% VAT is added to the price. Cleaning is done on weekdays between 8 am and 6 pm. There is an opportunity to receive a 40% household deduction for the service.</li>
+                  <li>35€</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+      </div>
+      
+      <!-- -------------------------------------------------- -->
+
+      <div class="servicesBody">
+
+        <div class="service1">
+          <div class="servicePar1">
+            <h3>
+              Personal assistance
+            </h3>
+
+              <div class="serviceInfo1">
+                <ul>
+
+                  <li>On public holidays and on the eve of public holidays, e.g. Christmas Eve and Midsummer Eve, we charge according to the Sunday price list.</li>
+                  <li>Our services are eligible for household deductions, except for home medical care: <a href="https://www.vero.fi/henkiloasiakkaat/verokortti-ja-veroilmoitus/tulot-ja-vahennykset/kotitalousvahennys/">Vero</a></li>
+                  <li>You may be entitled to Pensioner Care Allowance granted by Kela: <a href="https://www.kela.fi/elaketta-saavan-hoitotuki">Kela</a></li>
+                  <li>You can apply for a service voucher from the municipality, which serves as a payment commitment for purchasing services.</li>
+                  <li>Minimum billing 30 min. Billing once a month. Payment terms 14 days net. Late payment interest according to law.</li>
+                  <li>The social and healthcare services we offer are, by law, VAT-free (0%).</li>
+                  <li>The first assessment visit is free of charge and does not bind you in any way. During the visit, we will draw up a service and care plan for you. We will update the plan to suit your situation.</li>
+  
+                </ul>
+
+                  <div class="serviceButton">
+                    <button>
+                    Book a free introductory visit
+                    </button>
+                  </div>
+
+              </div>
+            </div>
+
+            <div class="servicePrice1">
+              <div class="servicePriceContainer">
+                <p>
+                  Price
+                </p>
+
+                <ul>
+                  <li>Blood sampling and delivery of samples to the laboratory €53.35 / time</li>
+                  <li>30€/hour</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+      <!-- --------------------------------------------------- -->
+
+
+      <div id="footer"></div>
+
+      <script>
+      fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+    </script>
+
+  </body>
+</html>
