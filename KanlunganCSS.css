@@ -18,6 +18,16 @@
   width: auto;
 }
 
+.navHead .dropdown a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
 /* WEB HEADER */
 
 .topHeader {
@@ -314,7 +324,7 @@
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 25px;
+  font-size: 20px;
   
 
   width: 100%;
@@ -342,7 +352,7 @@ h3 {
   padding-left: 10rem;
   padding-right: 10rem;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 25px;
 }
 
 /* FOOTER */
@@ -406,7 +416,7 @@ h3 {
 
 .contactUsBody {
   width: auto;
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -516,7 +526,7 @@ h3 {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .contactUsGrid {
@@ -560,6 +570,14 @@ h3 {
   grid-template-columns: auto 31rem;
   margin: 2rem;
   border-radius: 2rem;
+}
+
+.serviceButton {
+  grid-column: 1 / -1;
+
+  display: grid;
+  place-items: center;
+  margin: 3rem;
 }
 
 
@@ -626,12 +644,6 @@ h3 {
   font-size: 20px;
 }
 
-.serviceButton {
-  display: grid;
-  place-items: center;
-  
-}
-
 .serviceButton button {
   font-size: 18px;
   border-radius: 15px;
@@ -661,9 +673,29 @@ h3 {
 }
 
 
-
-
 @media (min-width: 375px) and (max-width: 874px) {
+
+  .service1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "price"
+      "button";
+  }
+
+  .servicePar1 {
+    grid-area: content;
+  }
+
+  .servicePrice1 {
+    grid-area: price;
+  }
+
+  .serviceButton {
+    grid-area: button;
+  }
+
 
   .topHeadSpan {
     display: none;
@@ -689,28 +721,7 @@ h3 {
     align-items: center;
     position: relative;
     
-    
   }
-
-  .dropdown {
-    position: absolute;
-    top: 40px;
-    left: auto;
-    right: 100%;
-    right: calc(100% + 10px)
-  }
-  
-  .services > a {
-    order: 1;
-  }
-
-  .services.active .dropdown {
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    visibility: visible;
-  }
-
 
   .navHead.active {
     display: flex;
@@ -818,6 +829,9 @@ h3 {
     width: 100%;
     max-width: 250px;
   }
+
+
+
 }
 
 @media (min-width: 375px) and (max-width: 1084px) {
