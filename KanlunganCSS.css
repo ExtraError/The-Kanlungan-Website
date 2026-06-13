@@ -725,6 +725,26 @@ h3 {
     
   }
 
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: 100%;
+    right: calc(100% + 10px)
+  }
+  
+  .services > a {
+    order: 1;
+  }
+
+  .services.active .dropdown {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
   .navHead.active {
     display: flex;
   }
