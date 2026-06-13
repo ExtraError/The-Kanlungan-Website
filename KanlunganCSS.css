@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 
 .page {
   display: flex;
@@ -694,8 +696,8 @@ h3 {
 
   .serviceButton {
     grid-area: button;
+    grid-column: auto;
   }
-
 
   .topHeadSpan {
     display: none;
