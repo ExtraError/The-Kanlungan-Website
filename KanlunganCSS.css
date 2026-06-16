@@ -78,17 +78,6 @@ html {
 }
 
 
-.appointmentButton {
-  font-size: 16px;
-  border-radius: 15px;
-  border: 1px solid gray;
-  background-color: #115bfa;
-  color: white;
-  padding: 12px;
-  cursor: pointer;
-  
-}
-
 .appointmentButton:active {
   background-color:#042fbd;
 }
@@ -127,7 +116,7 @@ html {
   display: flex;
 }
 
-.topHeader a {
+.topHeader a:not(.appointmentButton) {
   font-size: 30px;
 }
 
@@ -251,7 +240,7 @@ html {
 }
 
 
-.learnMore, .servicesContainer {
+.learnMore, .servicesContainer, .bookAppointment {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -259,7 +248,7 @@ html {
   width: auto;
 }
 
-.learnMoreBtn, .ourServicesBtn {
+.learnMoreBtn, .ourServicesBtn, .appointmentButton {
   font-size: 16px;
   border-radius: 15px;
   border: 1px solid gray;
@@ -274,7 +263,7 @@ html {
   background-color:#042fbd;
 }
 
-.appointmentButton, .learnMoreBtn, .ourServicesBtn {
+.learnMoreBtn, .ourServicesBtn, .appointmentButton {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
