@@ -21,11 +21,10 @@ html {
 }
 
 .navHead .dropdown a {
-  font: inherit;
   text-decoration: none;
   color: inherit;
   display: block;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -116,8 +115,10 @@ html {
   display: flex;
 }
 
-.topHeader a:not(.appointmentButton) {
+.navHead > a,
+.services > a {
   font-size: 30px;
+  margin: 5px;
 }
 
 .dropdown {
@@ -741,7 +742,7 @@ h3 {
 
   .navHead a,
   .navHead .services {
-    padding: 10px 0;
+    margin: 5px;
   }
 
 
