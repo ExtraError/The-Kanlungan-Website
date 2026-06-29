@@ -15,3 +15,14 @@ function initHamburger() {
     }
   });
 }
+
+const radios = document.querySelectorAll('input[name="service"]');
+
+radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+        document.querySelectorAll('.containerService')
+            .forEach(container => container.classList.remove('activate'));
+
+        radio.closest('.containerService').classList.add('activate');
+    });
+});

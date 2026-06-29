@@ -18,6 +18,24 @@
 
     </head>
     <body>
+
+        <div id="header"></div>
+
+    <script src="kanlunganJS.js"></script>
+
+    <script>
+      fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        initHamburger();
+      })
+
+    </script>
+
+
+
         <div class="chooseServiceBody">
 
             <div class="chooseOption">
@@ -25,7 +43,7 @@
             </div>
 
             <div class="chooseService">
-                <div class="domicareContainer">
+                <div class="domicareContainer containerService">
                     Domiciliary care
                     <div class="chooseCircle">
                         <label class="chooseServ">
@@ -35,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="homecareContainer">
+                <div class="homecareContainer containerService">
                     Home health care
                     <div class="chooseCircle">
                         <label class="chooseServ">
@@ -45,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="homesupportContainer">
+                <div class="homesupportContainer containerService">
                     Home care support
                     <div class="chooseCircle">
                         <label class="chooseServ">
@@ -55,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="personalassistContainer">
+                <div class="personalassistContainer containerService">
                     Personal Assistance
                     <div class="chooseCircle">
                         <label class="chooseServ">
@@ -114,7 +132,16 @@
 
         </div>
 
+       <div id="footer"></div>
 
+    <script>
+      fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+    </script>
 
+<script src="kanlunganJS.js"></script>
     </body>
 </html>

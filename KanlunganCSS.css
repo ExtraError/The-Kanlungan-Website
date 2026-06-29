@@ -489,6 +489,7 @@ h3 {
   padding: 12px;
   cursor: pointer;
   
+  margin-bottom: 20px;
 }
 
 .contactContain1 {
@@ -692,8 +693,25 @@ h3 {
   width: 35rem;
 
   padding: 15px;
+
+
+
+
 }
 
+.domicareContainer:hover, .homecareContainer:hover, .homesupportContainer:hover, .personalassistContainer:hover {
+  background-color: #e6f2ff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.domicareContainer.activate, .homecareContainer.activate, .homesupportContainer.activate, .personalassistContainer.activate {
+background-color: #208cff;
+box-shadow: none;
+}
+
+.activate {
+  background: rgb(0, 0, 255);
+}
 
 .chooseBody {
   display: flex;
