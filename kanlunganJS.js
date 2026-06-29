@@ -23,6 +23,6 @@ radios.forEach(radio => {
         document.querySelectorAll('.containerService')
             .forEach(container => container.classList.remove('activate'));
 
-        radio.closest('.containerService').classList.add('activate');
+        radio.closest('.containerService').classList.add('activ');
     });
 });
