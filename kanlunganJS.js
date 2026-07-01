@@ -46,7 +46,7 @@
             message: e.target.message.value
         };
 
-        const response = await fetch("http://localhost:3000/contact", {
+        const response = await fetch("https://the-kanlungan-website.onrender.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -87,7 +87,7 @@
             message: e.target.message.value,
         };
 
-        const response = await fetch("http://localhost:3000/bookservice", {
+        const response = await fetch("https://the-kanlungan-website.onrender.com/bookservice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
