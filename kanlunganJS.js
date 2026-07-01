@@ -46,7 +46,7 @@
             message: e.target.message.value
         };
 
-        const response = await fetch("http://localhost:3000/contact", {
+        const response = await fetch("https://the-kanlungan-website.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
