@@ -21,7 +21,6 @@
 
         <div id="header"></div>
 
-    <script src="kanlunganJS.js"></script>
 
     <script>
       fetch("header.html")
@@ -37,7 +36,7 @@
 
 
         <div class="chooseServiceBody">
-
+        <form id="choosingService">
             <div class="chooseOption">
                 <p>What service do you need?</p>
             </div>
@@ -47,7 +46,7 @@
                     Domiciliary care
                     <div class="chooseCircle">
                         <label class="chooseServ">
-                        <input type="radio" name="service">
+                        <input type="radio" name="service" value="Domiciliary care">
                         <span class="circle"></span>
                         </label>
                     </div>
@@ -57,7 +56,7 @@
                     Home health care
                     <div class="chooseCircle">
                         <label class="chooseServ">
-                        <input type="radio" name="service">
+                        <input type="radio" name="service" value="Home health care">
                         <span class="circle"></span>
                         </label>
                     </div>
@@ -67,7 +66,7 @@
                     Home care support
                     <div class="chooseCircle">
                         <label class="chooseServ">
-                        <input type="radio" name="service">
+                        <input type="radio" name="service" value="Home care support">
                         <span class="circle"></span>
                         </label>
                     </div>
@@ -77,36 +76,38 @@
                     Personal Assistance
                     <div class="chooseCircle">
                         <label class="chooseServ">
-                        <input type="radio" name="service">
+                        <input type="radio" name="service" value="Personal Assistance">
                         <span class="circle"></span>
                         </label>
                     </div>
                 </div>
             </div>
         
+        
 
-    <!--    FORMS  -->
+         <!--    FORMS  -->
 
             <div class="fillUpForm">
                 <p>Please fill up this form by entering your details here..</p>
             </div>
 
-    <form class="chooseBody">
+            <div class="chooseBody">
 
               <div class="userCon1">
-                <input type="text" placeholder="Enter your name">
-                <input type="text" placeholder="Enter your lastname">
+                <input type="text" placeholder="Enter your name" name="firstname">
+                <input type="text" placeholder="Enter your lastname" name="lastname">
               </div>
 
-                <input type="text" placeholder="Enter building and street address...">
+                <input type="text" placeholder="Enter building and street address..." name="streetAddress">
 
              <div class="userCon2">
-                <input type="text" placeholder="Enter your city...">
-                <input type="text" placeholder="Enter your province...">
-                <input type="text" placeholder="Enter your zip code...">
+                <input type="text" placeholder="Enter your city..." name="cityAddress">
+                <input type="text" placeholder="Enter your province..." name="provinceAddress">
+                <input type="text" placeholder="Enter your zip code..."
+                name="zipCode">
              </div>
 
-                <input type="text" placeholder="Enter your email...">
+                <input type="text" placeholder="Enter your email..." name="email">
 
               <div class="userCon1">
 
@@ -119,16 +120,17 @@
                     </select>
 
 
-                <input id="phone" class="user1" type="tel" placeholder="Ex. 447512003">
+                <input id="phone" class="user1" type="tel" placeholder="Ex. 447512003" name="phone">
               </div>
 
-                  <textarea placeholder="You can write your message here..." class="textArea"></textarea>
+                  <textarea placeholder="You can write your message here..." class="textArea" name="message"></textarea>
 
                   <div class="boton">
                     <button type="submit">Send Message</button>
                   </div>
+                </div>
 
-            </form>
+             </form>
 
         </div>
 

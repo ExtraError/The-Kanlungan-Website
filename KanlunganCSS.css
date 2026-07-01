@@ -848,6 +848,7 @@ form > input {
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
+    z-index: 9999;
     
     flex-wrap: wrap;
   } 
@@ -856,12 +857,11 @@ form > input {
     display: block;
     align-items: center;
     position: relative;
-    
   }
 
   .dropdown {
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: auto;
     transform: translateX(calc(10px - -100%));
     right: calc(100% + 10px);
@@ -870,6 +870,7 @@ form > input {
   
   .services > a {
     order: 1;
+    
   }
 
   .services.active .dropdown {
@@ -882,11 +883,13 @@ form > input {
 
   .navHead.active {
     display: flex;
+
   }
 
   .navHead a,
   .navHead .services {
     margin: 5px;
+
   }
 
 
@@ -995,6 +998,7 @@ form > input {
 @media (min-width: 375px) and (max-width: 1084px) {
   .topHeadSpan {
     display: none;
+    
   }
 
   .parContact {
