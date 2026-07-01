@@ -34,15 +34,15 @@ app.post("/contact", async (req, res) => {
     try {
 
         await transporter.sendMail({
-            from: "extraerrordemogmail@gmail.com",
-            to: "extraerrordemogmail@gmail.com",
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
 
 text: `
 First Name: ${firstname}
 Last Name: ${lastname}
+Email: ${email}
 Phone: ${phone}
-
 Message:
 ${message}
 `
@@ -71,8 +71,8 @@ app.post("/bookservice", async (req, res) => {
     try {
 
         await transporter.sendMail({
-            from: "extraerrordemogmail@gmail.com",
-            to: "extraerrordemogmail@gmail.com",
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
 
 text: `
@@ -83,8 +83,8 @@ Street: ${street}
 City: ${city}
 Province: ${province}
 Zip Code: ${zipcode}
+Email: ${email}
 Phone Number: ${phone}
-
 Message:
 ${message}
     `
@@ -104,9 +104,7 @@ ${message}
 // google mail transporter
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    service: "gmail",
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
