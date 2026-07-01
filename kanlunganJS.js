@@ -61,35 +61,14 @@
 
 }
 
-// document.getElementById("contactForm").addEventListener("submit", async function (e) {
-//     e.preventDefault();
 
-//     const formData = {
-//         firstname: e.target.firstname.value,
-//         lastname: e.target.lastname.value,
-//         email: e.target.email.value,
-//         phone: e.target.phone.value,
-//         message: e.target.message.value
-//     };
-
-//     const response = await fetch("http://localhost:3000/contact", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(formData)
-//     });
-
-//     const result = await response.text();
-//     alert(result);
-// });
 
 
     // BACKEND BOOKING SERVICE
 
     const bookingForm = document.getElementById("choosingService");
 
-if (bookingForm) {
+    if (bookingForm) {
 
     bookingForm.addEventListener("submit", async function (e) {
 
@@ -122,31 +101,3 @@ if (bookingForm) {
     });
 
 }
-
-// document.getElementById("choosingService").addEventListener("submit", async function (e) {
-//     e.preventDefault();
-
-//     const formData = {
-//         service:  e.target.service.value,
-//         firstname: e.target.firstname.value,
-//         lastname: e.target.lastname.value,
-//         street: e.target.streetAddress.value,
-//         city: e.target.cityAddress.value,
-//         province: e.target.provinceAddress.value,
-//         zipcode: e.target.zipCode.value,
-//         email: e.target.email.value,
-//         phone: e.target.phone.value,
-//         message: e.target.message.value,
-//     };
-
-//     const response = await fetch("http://localhost:3000/bookservice", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(formData)
-//     });
-
-//     const result = await response.text();
-//     alert(result);
-// });
