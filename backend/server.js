@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 3000;
 
 // IMPORTANT: lets backend read form data (JSON)
 app.use(cors({
-    origin: "https://extraerror.github.io"
+    origin: "https://extraerror.github.io",
+            "https://extraerror.github.io/The-Kanlungan-Website"
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -114,4 +115,13 @@ const transporter = nodemailer.createTransport({
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+});
+
+
+transporter.verify((err, success) => {
+    if (err) {
+        console.error("VERIFY ERROR:", err);
+    } else {
+        console.log("SMTP READY");
+    }
 });
