@@ -46,7 +46,7 @@
             message: e.target.message.value
         };
 
-        const response = await fetch("https://the-kanlungan-website.onrender.com/contact", {
+        const response = await fetch("https://the-kanlungan-website-p4eve.eu-east-1.migetapp.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -87,7 +87,7 @@
             message: e.target.message.value,
         };
 
-        const response = await fetch("https://the-kanlungan-website.onrender.com/bookservice", {
+        const response = await fetch("https://the-kanlungan-website-p4eve.eu-east-1.migetapp.com/bookservice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
