@@ -161,7 +161,7 @@ app.post("/contact", async (req, res) => {
     try {
 
         await resend.emails.send({
-            from: "onboarding@resend.dev", // swap for your verified domain later
+            from: "process.env.EMAIL_USER",
             to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
             text: `
@@ -197,7 +197,7 @@ app.post("/bookservice", async (req, res) => {
     try {
 
         await resend.emails.send({
-            from: "onboarding@resend.dev", // swap for your verified domain later
+            from: "process.env.EMAIL_USER",
             to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
             text: `
