@@ -106,10 +106,7 @@ ${message}
 // google mail transporter
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-
+   service: "gmail",
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
@@ -117,17 +114,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-console.log("PORT =", process.env.PORT);
-
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
-
-transporter.verify((err, success) => {
-    if (err) {
-        console.error("VERIFY ERROR:", err);
-    } else {
-        console.log("SMTP READY");
-    }
-});
