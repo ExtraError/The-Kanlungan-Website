@@ -46,7 +46,7 @@
             message: e.target.message.value
         };
 
-        const response = await fetch("the-kanlungan-website-production.up.railway.app/contact", {
+        const response = await fetch("https://the-kanlungan-website-production.up.railway.app/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -87,7 +87,7 @@
             message: e.target.message.value,
         };
 
-        const response = await fetch("the-kanlungan-website-production.up.railway.app/bookservice", {
+        const response = await fetch("https://the-kanlungan-website-production.up.railway.app/bookservice", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
