@@ -123,16 +123,14 @@
 
 require("dotenv").config();
 
-const dns = require("dns");
-dns.setDefaultResultOrder("ipv4first"); // 🔑 force IPv4 DNS resolution — fixes ENETUNREACH on Railway/Render
-
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 const cors = require("cors");
 const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// IMPORTANT: lets backend read form data (JSON)
 app.use(cors({
     origin: [
         "https://extraerror.github.io",
@@ -143,34 +141,17 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// google mail transporter — moved above routes for clarity (not required, but cleaner)
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    },
-    connectionTimeout: 10000, // fail fast instead of hanging
-    greetingTimeout: 10000,
-});
-
-// verify transporter on boot so you see connection issues in logs immediately
-transporter.verify((err, success) => {
-    if (err) {
-        console.error("❌ SMTP transporter verify failed:", err);
-    } else {
-        console.log("✅ SMTP transporter ready");
-    }
-});
+// Resend client — this is "where your API goes"
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // test route
 app.get("/", (req, res) => {
     res.send("Backend is working 🚀");
 });
 
+// THIS is where contact form data will go
 app.post("/contact", async (req, res) => {
+
     const { firstname, lastname, email, phone, message } = req.body;
 
     if (!firstname || !lastname || !email || !phone || !message) {
@@ -178,8 +159,9 @@ app.post("/contact", async (req, res) => {
     }
 
     try {
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+
+        await resend.emails.send({
+            from: "onboarding@resend.dev", // swap for your verified domain later
             to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
             text: `
@@ -193,13 +175,19 @@ ${message}
         });
 
         res.status(200).send("Email sent successfully!");
+
     } catch (error) {
+
         console.error("Email send error (/contact):", error);
         res.status(500).send("Failed to send email.");
+
     }
 });
 
+// This is where booking service data will go
+
 app.post("/bookservice", async (req, res) => {
+
     const { service, firstname, lastname, street, city, province, zipcode, email, phone, message } = req.body;
 
     if (!service || !firstname || !lastname || !street || !city || !province || !zipcode || !email || !phone || !message) {
@@ -207,8 +195,9 @@ app.post("/bookservice", async (req, res) => {
     }
 
     try {
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+
+        await resend.emails.send({
+            from: "onboarding@resend.dev", // swap for your verified domain later
             to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
             text: `
@@ -227,9 +216,12 @@ ${message}
         });
 
         res.status(200).send("Email sent successfully!");
+
     } catch (error) {
+
         console.error("Email send error (/bookservice):", error);
         res.status(500).send("Failed to send email.");
+
     }
 });
 
