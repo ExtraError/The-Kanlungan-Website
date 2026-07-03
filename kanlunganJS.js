@@ -101,3 +101,116 @@
     });
 
 }
+
+
+
+// just to make the web slow for loading screen view
+const Loader = (() => {
+    let loader;
+
+    function show() {
+        if (loader) return;
+
+        loader = document.createElement("div");
+
+        loader.innerHTML = `
+            <div class="skeleton-container">
+                <div class="skeleton skeleton-title"></div>
+
+                <div class="skeleton-card">
+                    <div class="skeleton skeleton-image"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text short"></div>
+                </div>
+
+                <div class="skeleton-card">
+                    <div class="skeleton skeleton-image"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text short"></div>
+                </div>
+            </div>
+        `;
+
+        Object.assign(loader.style, {
+            position: "fixed",
+            inset: "0",
+            background: "#fff",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: "999999"
+        });
+
+        const style = document.createElement("style");
+        style.textContent = `
+            .skeleton-container {
+                width: min(90%, 500px);
+            }
+
+            .skeleton-card {
+                margin-top: 20px;
+            }
+
+            .skeleton {
+                border-radius: 8px;
+                background: linear-gradient(
+                    90deg,
+                    #eeeeee 25%,
+                    #f5f5f5 50%,
+                    #eeeeee 75%
+                );
+                background-size: 200% 100%;
+                animation: shimmer 1.4s infinite;
+            }
+
+            .skeleton-title {
+                width: 60%;
+                height: 28px;
+                margin-bottom: 24px;
+            }
+
+            .skeleton-image {
+                width: 100%;
+                height: 180px;
+                margin-bottom: 12px;
+            }
+
+            .skeleton-text {
+                width: 100%;
+                height: 16px;
+                margin-bottom: 10px;
+            }
+
+            .skeleton-text.short {
+                width: 70%;
+            }
+
+            @keyframes shimmer {
+                from {
+                    background-position: 200% 0;
+                }
+                to {
+                    background-position: -200% 0;
+                }
+            }
+        `;
+
+        document.head.appendChild(style);
+        loader.dataset.styleId = "loader-skeleton-style";
+
+        document.body.appendChild(loader);
+    }
+
+    function hide() {
+        loader?.remove();
+        loader = null;
+    }
+
+    return { show, hide };
+})();
+
+Loader.show();
+
+window.addEventListener("load", () => {
+        Loader.hide();
+});
