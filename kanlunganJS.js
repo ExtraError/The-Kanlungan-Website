@@ -83,10 +83,13 @@
             province: e.target.provinceAddress.value,
             zipcode: e.target.zipCode.value,
             email: e.target.email.value,
-            countryCode: document.querySelector('select[name="countryCode"]').value,
+            countryCode: e.target.countryCode.value,
+            
             phone: e.target.phone.value,
             message: e.target.message.value,
         };
+
+
 
         const response = await fetch("https://the-kanlungan-website-p4eve.eu-east-1.migetapp.com/bookservice", {
             method: "POST",

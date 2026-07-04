@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // IMPORTANT: lets backend read form data (JSON)
 app.use(cors({
-    origin: [
+    origin:  [
         "https://extraerror.github.io",
         "https://extraerror.github.io/The-Kanlungan-Website"
     ]
@@ -64,6 +64,7 @@ ${message}
 
 app.post("/bookservice", async (req, res) => {
 
+
     const { service, firstname, lastname, street, city, province, zipcode, email, phone, countryCode, message } = req.body;
 
     if (!service || !firstname || !lastname || !street || !city || !province || !zipcode || !email || !phone || !countryCode ||  !message) {
@@ -101,6 +102,7 @@ ${message}
         res.status(500).send("Failed to send email.");
 
     }
+    
 });
 
 
