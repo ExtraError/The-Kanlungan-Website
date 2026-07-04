@@ -80,15 +80,15 @@ app.post("/bookservice", async (req, res) => {
 
 text: `
 Service: ${service}
-First Name: ${firstname}
+THIS IS A TEST: ${firstname}
 Last Name: ${lastname}
 Street: ${street}
 City: ${city}
-Province: ${province}
+THIS IS A TEST: ${province}
 Zip Code: ${zipcode}
 Email: ${email}
 Country Code: ${countryCode}
-Phone Number: ${phone}
+THIS IS A TEST: ${phone}
 Message:
 ${message}
     `
