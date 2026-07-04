@@ -83,7 +83,7 @@
             province: e.target.provinceAddress.value,
             zipcode: e.target.zipCode.value,
             email: e.target.email.value,
-            countryCode: e.target.countryCode.value,
+            countryCode: document.querySelector('select[name="countryCode"]').value,
             phone: e.target.phone.value,
             message: e.target.message.value,
         };
