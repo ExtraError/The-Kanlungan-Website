@@ -64,7 +64,6 @@ ${message}
 
 app.post("/bookservice", async (req, res) => {
 
-        console.log(req.body);
 
     const { service, firstname, lastname, street, city, province, zipcode, email, phone, countryCode, message } = req.body;
 
@@ -88,7 +87,8 @@ City: ${city}
 Province: ${province}
 Zip Code: ${zipcode}
 Email: ${email}
-Phone Number: ${countryCode} ${phone}
+Country Code: ${countryCode}
+Phone Number: ${phone}
 Message:
 ${message}
     `
