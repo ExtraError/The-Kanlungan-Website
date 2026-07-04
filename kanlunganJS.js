@@ -43,6 +43,7 @@
             lastname: e.target.lastname.value,
             email: e.target.email.value,
             phone: e.target.phone.value,
+            countryCode: e.target.countryCode.value,
             message: e.target.message.value
         };
 

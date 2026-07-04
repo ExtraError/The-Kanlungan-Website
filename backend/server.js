@@ -27,9 +27,9 @@ app.get("/", (req, res) => {
 // THIS is where contact form data will go
 app.post("/contact", async (req, res) => {
 
-    const { firstname, lastname, email, phone, message } = req.body;
+    const { firstname, lastname, email, phone, countryCode, message } = req.body;
 
-    if (!firstname || !lastname || !email || !phone || !message) {
+    if (!firstname || !lastname || !email || !phone || !countryCode || !message) {
         return res.status(400).send("All fields are required.");
     }
 
@@ -44,7 +44,7 @@ text: `
 First Name: ${firstname}
 Last Name: ${lastname}
 Email: ${email}
-Phone: ${phone}
+Phone: ${countryCode} ${phone}
 Message:
 ${message}
 `
