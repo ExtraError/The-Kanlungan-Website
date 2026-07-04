@@ -84,7 +84,6 @@
             zipcode: e.target.zipCode.value,
             email: e.target.email.value,
             countryCode: e.target.countryCode.value,
-            
             phone: e.target.phone.value,
             message: e.target.message.value,
         };
