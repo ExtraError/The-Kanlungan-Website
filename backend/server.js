@@ -90,8 +90,6 @@ Email: ${email}
 Phone Number: ${countryCode} ${phone}
 Message:
 ${message}
-
-(need to be styled)
     `
         });
 
