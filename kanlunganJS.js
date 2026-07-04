@@ -43,7 +43,6 @@
             lastname: e.target.lastname.value,
             email: e.target.email.value,
             phone: e.target.phone.value,
-            countryCode: e.target.countryCode.value,
             message: e.target.message.value
         };
 
@@ -84,6 +83,7 @@
             province: e.target.provinceAddress.value,
             zipcode: e.target.zipCode.value,
             email: e.target.email.value,
+            countryCode: e.target.countryCode.value,
             phone: e.target.phone.value,
             message: e.target.message.value,
         };

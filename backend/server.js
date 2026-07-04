@@ -29,7 +29,7 @@ app.post("/contact", async (req, res) => {
 
     const { firstname, lastname, email, phone, countryCode, message } = req.body;
 
-    if (!firstname || !lastname || !email || !phone || !countryCode || !message) {
+    if (!firstname || !lastname || !email || !phone || !message) {
         return res.status(400).send("All fields are required.");
     }
 
@@ -44,7 +44,7 @@ text: `
 First Name: ${firstname}
 Last Name: ${lastname}
 Email: ${email}
-Phone: ${countryCode} ${phone}
+Phone: ${phone}
 Message:
 ${message}
 `
@@ -64,9 +64,9 @@ ${message}
 
 app.post("/bookservice", async (req, res) => {
 
-    const { service, firstname, lastname, street, city, province, zipcode, email, phone, message } = req.body;
+    const { service, firstname, lastname, street, city, province, zipcode, email, phone, countryCode, message } = req.body;
 
-    if (!service || !firstname || !lastname || !street || !city || !province || !zipcode || !email || !phone || !message) {
+    if (!service || !firstname || !lastname || !street || !city || !province || !zipcode || !email || !phone || !countryCode ||  !message) {
         return res.status(400).send("All fields are required.");
     }
 
@@ -86,7 +86,7 @@ City: ${city}
 Province: ${province}
 Zip Code: ${zipcode}
 Email: ${email}
-Phone Number: ${phone}
+Phone Number: ${countryCode} ${phone}
 Message:
 ${message}
     `
