@@ -86,7 +86,8 @@ City: ${city}
 Province: ${province}
 Zip Code: ${zipcode}
 Email: ${email}
-Phone Number: ${countryCode} ${phone}
+Country Code: ${countryCode}
+Phone Number: ${phone}
 Message:
 ${message}
     `
