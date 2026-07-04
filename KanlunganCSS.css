@@ -678,6 +678,12 @@ h3 {
   gap: 3rem;
 }
 
+#choosingService {
+  width: 100%;
+  max-width: 35rem;
+  box-sizing: border-box;
+}
+
 .domicareContainer, .homecareContainer, .homesupportContainer, .personalassistContainer {
   border: 2px solid black;
   border-radius: 20px;
@@ -688,9 +694,10 @@ h3 {
   font-size: 20px;
 
   display: grid;
-  grid-template-columns: auto 15rem;
+  grid-template-columns: 1fr auto;
 
-  width: 35rem;
+  width: 100%;
+  max-width: 35rem;
 
   padding: 15px;
 
@@ -717,7 +724,7 @@ box-shadow: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
+  
 }
 
 .chooseServ {
@@ -797,19 +804,31 @@ box-shadow: none;
   flex: 1;
 }
 
-form > input {
-  border: 2px solid #5a5a5a;
-  outline: none;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  height: 45px;
+.addressRow {
+    display: flex;
+    gap: 10px;
+
+    height: 45px;
+}
+
+.addressRow input {
+    flex: 1;
+    min-width: 0;   /* Important */
 }
 
 /* MEDIA QUERY NEEDS TO BE RECONSTRUCTED */
 
 @media (min-width: 375px) and (max-width: 874px) {
+
+  .chooseBody > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .chooseServiceBody {
+        gap: 1rem;
+    }
 
   .service1 {
     display: grid;
@@ -996,6 +1015,11 @@ form > input {
 }
 
 @media (min-width: 375px) and (max-width: 1084px) {
+
+  .chooseServiceBody {
+        gap: 2rem;
+    }
+
   .topHeadSpan {
     display: none;
     
@@ -1030,6 +1054,11 @@ form > input {
 }
 
 @media (min-width: 1085px) {
+
+  .chooseServiceBody {
+    gap: 3rem;
+} 
+
   .topHeadSpan,
   .navContainer {
     display: block;
