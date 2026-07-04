@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // IMPORTANT: lets backend read form data (JSON)
 app.use(cors({
-    origin:  [
+    origin: [
         "https://extraerror.github.io",
         "https://extraerror.github.io/The-Kanlungan-Website"
     ]
@@ -87,8 +87,7 @@ City: ${city}
 Province: ${province}
 Zip Code: ${zipcode}
 Email: ${email}
-Country Code: ${countryCode}
-Phone Number: ${phone}
+Phone Number: ${countryCode} ${phone}
 Message:
 ${message}
     `
