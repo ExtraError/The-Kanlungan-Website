@@ -813,8 +813,29 @@ box-shadow: none;
 
 .addressRow input {
     flex: 1;
-    min-width: 0;   /* Important */
+    min-width: 0;
 }
+
+
+/* SUBMIT BUTTON LOADING */
+
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* MEDIA QUERY NEEDS TO BE RECONSTRUCTED */
 
