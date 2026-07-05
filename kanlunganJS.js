@@ -35,26 +35,27 @@
     if (contactForm) {
 
     contactForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
 
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const btnText = submitBtn.querySelector(".btn-text");
-    const spinner = submitBtn.querySelector(".spinner");
+        e.preventDefault();
 
-    // Show loading
-    submitBtn.disabled = true;
-    btnText.style.display = "none";
-    spinner.style.display = "inline-block";
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector(".btn-text");
+        const spinner = submitBtn.querySelector(".spinner");
 
-    const formData = {
-        firstname: e.target.firstname.value,
-        lastname: e.target.lastname.value,
-        email: e.target.email.value,
-        phone: e.target.phone.value,
-        message: e.target.message.value
-    };
+        submitBtn.disabled = true;
+        btnText.style.display = "none";
+        spinner.style.display = "inline-block";
 
-    try {
+        const formData = {
+            firstname: e.target.firstname.value,
+            lastname: e.target.lastname.value,
+            email: e.target.email.value,
+            phone: e.target.phone.value,
+            message: e.target.message.value
+        };
+
+        try {
+
         const response = await fetch("https://the-kanlungan-website-p4eve.eu-east-1.migetapp.com/contact", {
             method: "POST",
             headers: {
@@ -65,17 +66,20 @@
 
         const result = await response.text();
         alert(result);
-    } catch (err) {
-        alert("Something went wrong.");
-        console.error(err);
-    } finally {
-        // Restore button
-        submitBtn.disabled = false;
-        btnText.style.display = "inline";
-        spinner.style.display = "none";
+
+        } catch (error) {
+
+    alert("Something went wrong.");
+
+    submitBtn.disabled = false;
+    btnText.style.display = "inline";
+    spinner.style.display = "none";
+
     }
-});
-}
+
+    });
+
+    }
 
 
 
