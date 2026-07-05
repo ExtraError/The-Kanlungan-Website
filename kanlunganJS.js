@@ -98,6 +98,14 @@
 
         e.preventDefault();
 
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector(".btn-text");
+        const spinner = submitBtn.querySelector(".spinner");
+
+        submitBtn.disabled = true;
+        btnText.style.display = "none";
+        spinner.style.display = "inline-block";
+
         const formData = {
             service:  e.target.service.value,
             firstname: e.target.firstname.value,
@@ -112,7 +120,7 @@
             message: e.target.message.value,
         };
 
-
+        try {
 
         const response = await fetch("https://the-kanlungan-website-p4eve.eu-east-1.migetapp.com/bookservice", {
             method: "POST",
@@ -124,6 +132,20 @@
 
         const result = await response.text();
         alert(result);
+
+        } catch (error) {
+
+    alert("Something went wrong.");
+
+    submitBtn.disabled = false;
+    btnText.style.display = "inline";
+    spinner.style.display = "none";
+
+    } finally {
+    submitBtn.disabled = false;
+    btnText.style.display = "inline";
+    spinner.style.display = "none";
+    }
 
     });
 
