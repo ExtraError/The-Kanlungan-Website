@@ -75,6 +75,10 @@
     btnText.style.display = "inline";
     spinner.style.display = "none";
 
+    } finally {
+    submitBtn.disabled = false;
+    btnText.style.display = "inline";
+    spinner.style.display = "none";
     }
 
     });
