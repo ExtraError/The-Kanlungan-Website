@@ -135,17 +135,17 @@
 
         } catch (error) {
 
-    alert("Something went wrong.");
+        alert("Something went wrong.");
 
-    submitBtn.disabled = false;
-    btnText.style.display = "inline";
-    spinner.style.display = "none";
+        submitBtn.disabled = false;
+        btnText.style.display = "inline";
+        spinner.style.display = "none";
 
-    } finally {
-    submitBtn.disabled = false;
-    btnText.style.display = "inline";
-    spinner.style.display = "none";
-    }
+        } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = "inline";
+        spinner.style.display = "none";
+        }
 
     });
 
